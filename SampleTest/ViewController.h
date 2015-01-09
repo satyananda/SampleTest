@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<myProtocolName>
+@property (weak, nonatomic) IBOutlet UIView *myView;
 
 
 @end
