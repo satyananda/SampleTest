@@ -41,6 +41,9 @@
         
         //Pass any Value...
         
+        
+        
+        
     }
     
 }
@@ -65,7 +68,16 @@
         
     }];
     
+    UIAlertAction *cancelButton = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+        
+        NSLog(@"Delegate Called");
+        
+        [self performSegueWithIdentifier:@"Second" sender:self];
+        
+    }];
+    
     [alert addAction:okButton];
+    [alert addAction:cancelButton];
     [self presentViewController:alert animated:YES completion:nil];
 }
 @end
